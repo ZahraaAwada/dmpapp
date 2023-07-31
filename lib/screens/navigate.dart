@@ -31,6 +31,7 @@ class _NavigateState extends State<Navigate> {
 
       appBar: AppBar(
         leading: Icon(Icons.notifications),
+        backgroundColor: Color(0xFFE6E6E6),
         actions: [
           Padding(padding: const EdgeInsets.all(8.0),
             child: CircleAvatar(
@@ -45,7 +46,7 @@ class _NavigateState extends State<Navigate> {
               padding: const EdgeInsets.only(top: 8),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
-                children: [Text('توصيل الى', style: TextStyle(fontSize: 15.0),)],),
+                children: [Text('توصيل الى', style: TextStyle(fontSize: 15.0, color: Colors.black26),)],),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,

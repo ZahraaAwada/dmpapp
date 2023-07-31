@@ -11,24 +11,30 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 10.0),
-      margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 8),
+      //padding: const EdgeInsets.symmetric(vertical: 10.0),
+      //margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 8),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(100),
+        //borderRadius: BorderRadius.circular(0),
+        color: Color(0xFFE6E6E6)
       ),
       child: ListView(
         children: [
           Padding(
-            padding: const EdgeInsets.all(25.0),
+            padding: const EdgeInsets.all(20.0),
             child: TextField(
               decoration: InputDecoration(
+                filled: true,
+                fillColor: Colors.white,
                   hintText: 'ابحث عن وليمتك المفضلة',
                   hintTextDirection: TextDirection.rtl,
+                hintStyle: TextStyle(color: Colors.black26),
                   suffixIcon: Icon(Icons.search),
                   prefixIcon: Icon(Icons.tune),
-                  border: OutlineInputBorder(
-                    //borderSide: const BorderSide()
-                  )
+                 // border: InputBorder.none,
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                  borderSide: BorderSide.none,
+                ),
               ),
             ),
           ),

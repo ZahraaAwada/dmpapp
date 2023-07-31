@@ -27,8 +27,10 @@ class _ProfileState extends State<Profile> {
                   suffixIcon: Icon(Icons.search),
                   prefixIcon: Icon(Icons.tune),
                   border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                    borderSide: BorderSide.none,
                     //borderSide: const BorderSide()
-                  )
+                  ),
               ),
             ),
           ),
