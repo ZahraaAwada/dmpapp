@@ -68,22 +68,36 @@ class _NavigateState extends State<Navigate> {
       body: screens[index],
       bottomNavigationBar: NavigationBarTheme(
         data: NavigationBarThemeData(
-          indicatorColor: Colors.orange,
-          //labelTextStyle:
-        ),
-        child: NavigationBar(
-          selectedIndex: index,
-          onDestinationSelected: (index) => setState(() =>
-            this.index = index
+          indicatorColor: Colors.transparent,
+          labelTextStyle: MaterialStateProperty.resolveWith<TextStyle>((states) {
+            if (states.contains(MaterialState.selected)) {
+              return TextStyle(color: Colors.orange);
+            } else {
+              return TextStyle(color: Colors.black26);
+            }
+          }
           ),
-          destinations: [
-            NavigationDestination(icon: Icon(Icons.person), label: 'حسابي'),
-            NavigationDestination(icon: Icon(Icons.receipt_outlined), label: 'السله'),
-            NavigationDestination(icon: Icon(Icons.shopping_bag_outlined), label: 'السلة'),
-            NavigationDestination(icon: Icon(Icons.home), label: 'الرئيسية')
-          ],
+          iconTheme: MaterialStateProperty.resolveWith<IconThemeData>((states) {
+            if (states.contains(MaterialState.selected)) {
+              return IconThemeData(color: Colors.orange);
+            } else {
+              return IconThemeData(color: Colors.black26);
+            }
+          })
+          ),
+      child: NavigationBar(
+        selectedIndex: index,
+        onDestinationSelected: (index) => setState(() =>
+        this.index = index
         ),
+        destinations: [
+          NavigationDestination(icon: Icon(Icons.person), label: 'حسابي'),
+          NavigationDestination(icon: Icon(Icons.receipt_outlined), label: 'السله'),
+          NavigationDestination(icon: Icon(Icons.shopping_bag_outlined), label: 'السلة'),
+          NavigationDestination(icon: Icon(Icons.home), label: 'الرئيسية')
+        ],
       ),
+    ),
     );
   }
 }
