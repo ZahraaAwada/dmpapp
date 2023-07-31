@@ -34,7 +34,19 @@ class _ProfileState extends State<Profile> {
               ),
             ),
           ),
-          Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCJ5C63QmbJQr7vXypZywXCQ3w8qmGkpd_Kg&usqp=CAU')
+          Column(
+            children: [
+              ClipRRect(
+
+              borderRadius: BorderRadius.circular(20),
+
+                  child: Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCJ5C63QmbJQr7vXypZywXCQ3w8qmGkpd_Kg&usqp=CAU')),
+              TextButton(style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.black)),
+                onPressed: () {},
+                child: Text("Button2"),)
+            ],
+          )
         ],
       ),
     );
