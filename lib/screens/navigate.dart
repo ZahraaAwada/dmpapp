@@ -1,9 +1,9 @@
 import 'package:dmp_app/screens/orders/profile.dart';
 import 'package:flutter/material.dart';
 
-import 'basket.dart';
-import 'home.dart';
-import 'menu.dart';
+import 'orders/basket.dart';
+import 'orders/home.dart';
+import 'orders/menu.dart';
 
 class Navigate extends StatefulWidget {
   const Navigate({Key? key}) : super(key: key);

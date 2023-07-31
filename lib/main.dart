@@ -1,6 +1,4 @@
-import 'package:dmp_app/screens/board.dart';
-import 'package:dmp_app/screens/dashboard.dart';
-import 'package:dmp_app/screens/orders/navigate.dart';
+import 'package:dmp_app/screens/navigate.dart';
 import 'package:flutter/material.dart';
 
 void main() {
